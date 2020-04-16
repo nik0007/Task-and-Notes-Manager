@@ -6,17 +6,11 @@
     <title>Task Manager App</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="/public/addNotes.js"></script>
-    <script src="/public/addTask.js"></script>
-    <script src="/public/dispNotes.js"></script>
-    <script src="/public/editRow.js"></script>
-    <script src="/public/sort.js"></script>
-    <script src="/routes/notes.js"></script>
-    <script src="/routes/tasks.js"></script>
-    <script src="db.js"></script>
-    <script src="server.js"></script>
-    <script src="write-db.js"></script>
+    <script src="editRow.js"></script>
+    <script src="dispNotes.js"></script>
+    <script src="addTask.js"></script>
+    <script src="addNode.js"></script>
+    <script src="sort.js"></script>
 </head>
 <body>
     <div class="container">
@@ -24,12 +18,13 @@
         <div class="first">
             <table class="table table-dark" id="taskTable" style="background-color: gray">
             </table>
-            <script src="/public/buildTable.js"></script>
+            <script src="buildTable.js"></script>
         </div>
-        <br><br>
+        <br>
+        <hr>
         <h1>Add a new task</h1>
         <div class="second">
-            <br><br>
+            <br>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" required><br><br>
             <label for="description">Description:</label>
@@ -44,7 +39,7 @@
             </select><br><br>
             <label for="state">Completed:</label>
             <input type="checkbox" id="state" disabled="disabled" name="state"><br><br>
-            <input class="btn btn-primary" type="button" id="submit" onclick="addTask()" value="Add Task">
+            <input class="btn btn-danger" type="button" id="submit" onclick="addTask()" value="Add Task">
         </div>
     </div>
 </body>
